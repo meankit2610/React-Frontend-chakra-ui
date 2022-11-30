@@ -54,6 +54,21 @@ function Header() {
                 <Link to={'/upload'}>Upload Videos</Link>
               </Button>
             </VStack>
+            <HStack
+              pos={'absolute'}
+              bottom={'10'}
+              left={'0'}
+              w={'full'}
+              justifyContent={'space-evenly'}
+            >
+              <Button onClick={onclose} colorScheme={'purple'}>
+                <Link to={'/login'}> Log In</Link>
+              </Button>
+              <Button onClick={onclose} colorScheme={'purple'} variant={'outline'}>
+                <Link to={'/signup'}> Sign Up</Link>
+              </Button>
+             
+            </HStack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
