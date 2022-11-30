@@ -1,6 +1,7 @@
 import React from 'react'
-import {Drawer,DrawerBody,DrawerCloseButton,DrawerContent,DrawerHeader,DrawerOverlay,Button,VStack,HStack,useDisclosure, Link} from '@chakra-ui/react'
-import {BiMenuAltLeft} from  'react-icons/bi'
+import {Drawer,DrawerBody,DrawerCloseButton,DrawerContent,DrawerHeader,DrawerOverlay,Button,VStack,HStack,useDisclosure} from '@chakra-ui/react'
+import { BiMenuAltLeft } from 'react-icons/bi'
+import {Link} from 'react-router-dom'
 function Header() {
     const {isOpen,onClose,onOpen} = useDisclosure()
   return (
@@ -22,6 +23,7 @@ function Header() {
       <Drawer isOpen={isOpen} onClose={onClose} placement="left">
         <DrawerOverlay />
         <DrawerContent>
+          <DrawerCloseButton/>
           <DrawerHeader>VIDEO HUB</DrawerHeader>
           <DrawerBody>
             <VStack alignItems={'flex-start'}>
@@ -61,10 +63,10 @@ function Header() {
               w={'full'}
               justifyContent={'space-evenly'}
             >
-              <Button onClick={onclose} colorScheme={'purple'}>
+              <Button onClick={onClose} colorScheme={'purple'}>
                 <Link to={'/login'}> Log In</Link>
               </Button>
-              <Button onClick={onclose} colorScheme={'purple'} variant={'outline'}>
+              <Button onClick={onClose} colorScheme={'purple'} variant={'outline'}>
                 <Link to={'/signup'}> Sign Up</Link>
               </Button>
              
